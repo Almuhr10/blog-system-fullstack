@@ -23,12 +23,12 @@ export const App = () => {
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign-up" element={<RegisterPage />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/blog-details" element={<BlogDetails />} />
           </Route>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/sign-up" element={<RegisterPage />} />
         </Routes>
       </ChakraProvider>
     </BrowserRouter>
